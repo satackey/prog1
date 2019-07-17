@@ -1,0 +1,59 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "gcc compile",
+            "type": "shell",
+            "command": "N:\\MinGW\\bin\\gcc",
+            "args": [
+                "-g",
+                // "--input-charset=cp932",
+                // "--fexec-charset=cp932",
+                "${file}",
+                "-o",
+                "${fileDirname}\\.bin\\${fileBasenameNoExtension}.out.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "gcc compile for cygwin",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                // "--input-charset=cp932",
+                // "--fexec-charset=cp932",
+                "'${file}'",
+                "-o",
+                "'${fileDirname}\\.bin\\${fileBasenameNoExtension}.out.exe'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "make .bin",
+            "type": "shell",
+            "command": "mkdir",
+            "args": [
+                "${fileDirname}\\.bin"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
