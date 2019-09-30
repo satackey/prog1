@@ -6,14 +6,14 @@
         {
             "label": "gcc compile",
             "type": "shell",
-            "command": "N:\\MinGW\\bin\\gcc",
+            "command": "N:/MinGW/bin/gcc",
             "args": [
                 "-g",
                 // "--input-charset=cp932",
                 // "--fexec-charset=cp932",
                 "${file}",
                 "-o",
-                "${fileDirname}\\.bin\\${fileBasenameNoExtension}.out.exe"
+                "${fileDirname}/.bin/${fileBasenameNoExtension}.out.exe"
             ],
             "group": {
                 "kind": "build",
@@ -33,7 +33,7 @@
                 // "--fexec-charset=cp932",
                 "'${file}'",
                 "-o",
-                "'${fileDirname}\\.bin\\${fileBasenameNoExtension}.out.exe'"
+                "'${fileDirname}/.bin/${fileBasenameNoExtension}.out.exe'"
             ],
             "group": {
                 "kind": "build",
@@ -48,7 +48,7 @@
             "type": "shell",
             "command": "mkdir",
             "args": [
-                "${fileDirname}\\.bin"
+                "${fileDirname}/.bin"
             ],
             "group": {
                 "kind": "build",
