@@ -21,6 +21,7 @@ int main(void)
 
             if (str2[i] != str2[i]) {
                 equal = 0;
+                break;
             }
         }
 
