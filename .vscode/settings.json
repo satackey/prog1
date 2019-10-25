@@ -3,5 +3,7 @@
     "files.associations": {
         "stdio.h": "c"
     },
-
+    "terminal.integrated.env.windows": {
+        "PATH": "${env:PATH}"
+ },
 }
