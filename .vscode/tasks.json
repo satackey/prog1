@@ -6,34 +6,12 @@
         {
             "label": "gcc compile",
             "type": "shell",
-            "command": "N:/MinGW/bin/gcc",
-            "args": [
-                "-g",
-                // "--input-charset=cp932",
-                // "--fexec-charset=cp932",
-                "${file}",
-                "-o",
-                "${fileDirname}/.bin/${fileBasenameNoExtension}.out.exe"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
-            "label": "gcc compile for cygwin",
-            "type": "shell",
             "command": "gcc",
             "args": [
                 "-g",
-                // "--input-charset=cp932",
-                // "--fexec-charset=cp932",
-                "'${file}'",
+                "'${relativeFile}'",
                 "-o",
-                "'${fileDirname}/.bin/${fileBasenameNoExtension}.out.exe'"
+                "'${relativeFileDirname}/.bin/${fileBasenameNoExtension}.out'"
             ],
             "group": {
                 "kind": "build",
@@ -48,7 +26,7 @@
             "type": "shell",
             "command": "mkdir",
             "args": [
-                "${fileDirname}/.bin"
+                "${relativeFileDirname}/.bin"
             ],
             "group": {
                 "kind": "build",
