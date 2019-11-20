@@ -6,12 +6,9 @@
         {
             "label": "gcc compile",
             "type": "shell",
-            "command": "gcc",
+            "command": "${workspaceRoot}/compile.sh",
             "args": [
-                "-g",
-                "'${relativeFile}'",
-                "-o",
-                "'${relativeFileDirname}/.bin/${fileBasenameNoExtension}.out'"
+                "'${relativeFile}'"
             ],
             "group": {
                 "kind": "build",
@@ -20,18 +17,6 @@
             "problemMatcher": [
                 "$gcc"
             ]
-        },
-        {
-            "label": "make .bin",
-            "type": "shell",
-            "command": "mkdir",
-            "args": [
-                "${relativeFileDirname}/.bin"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
         }
     ]
 }
