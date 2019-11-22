@@ -12,7 +12,10 @@ int main(void) {
 
 void kuku(int n) {
     if (n < 9) kuku(n+1);
+    printf("[%dの段]", n);
     for (int i = 1; i <= 9; i++) {
-        printf("%d\t", n * i);
+        printf("%3d", n * i);
     }
+    printf("\n");
+    return;
 }
