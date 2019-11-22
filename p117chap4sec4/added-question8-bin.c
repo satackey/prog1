@@ -13,7 +13,9 @@ int main(void) {
 int bin(int n) {
     if (n >= 2) {
         bin(n / 2);
+        printf("%d", n % 2);
+        return;
     }
-    printf("%d", n % 2);
+    printf("%d\n", n % 2);
     return 0;
 }
