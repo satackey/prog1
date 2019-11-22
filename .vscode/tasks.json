@@ -6,7 +6,7 @@
         {
             "label": "gcc compile",
             "type": "shell",
-            "command": "${workspaceRoot}/compile.sh",
+            "command": "'${workspaceRoot}/.compile.sh'",
             "args": [
                 "'${relativeFile}'"
             ],
