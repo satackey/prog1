@@ -7,7 +7,8 @@ COMPILE_TO_DIR="$SOURCE_CODE_DIR/.bin"
 COMPILE_TO_FILE="${SOURCE_CODE_FILE%.*}.out"
 COMPILE_TO="$COMPILE_TO_DIR/$COMPILE_TO_FILE"
 
-mkdir -p "'$COMPILE_TO_DIR'"
+mkdir -p "$COMPILE_TO_DIR"
+
 gcc -g -o "$COMPILE_TO" "$SOURCE_CODE"
 
 echo "Congratulations!! Successfully Compiled."

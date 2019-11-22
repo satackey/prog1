@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int bin(int);
+void bin(int);
 
 int main(void) {
     int inputted_num;
@@ -10,12 +10,12 @@ int main(void) {
     return 0;
 }
 
-int bin(int n) {
+void bin(int n) {
     if (n >= 2) {
         bin(n / 2);
         printf("%d", n % 2);
         return;
     }
     printf("%d\n", n % 2);
-    return 0;
+    return;
 }
