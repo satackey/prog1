@@ -10,6 +10,8 @@ COMPILE_TO="$COMPILE_TO_DIR/$COMPILE_TO_FILE"
 mkdir -p "$COMPILE_TO_DIR"
 
 gcc -g -o "$COMPILE_TO" "$SOURCE_CODE"
+echo gcc -g -o "$COMPILE_TO" "$SOURCE_CODE"
+
 
 echo "Congratulations!! Successfully Compiled."
 echo "To run: ./$COMPILE_TO"
